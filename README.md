@@ -3,6 +3,8 @@ d3.svg.ribbon
 
 ![d3.svg.ribbon](images/example.png)
 
+[Interactive example](http://bl.ocks.org/emeeks/a1e48992be56681e3f93)
+
 Designed to interpolate ribbon or band areas based on sample points with radii.
 
 **#ribbon.x()**
