@@ -1,0 +1,33 @@
+{
+  "name": "d3-svg-ribbon",
+  "version": "1.0.0",
+  "description": "A generator that creates areas based on points and their radii.",
+  "main": "index.js",
+  "keywords": [
+    "d3",
+    "generator"
+  ],
+  "directories": {
+    "examples": "examples"
+  },
+  "dependencies": {
+    "d3": "^3.5.6"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emeeks/d3.svg.ribbon"
+  },
+  "author": {
+    "name": "Elijah Meeks",
+    "url": "http://www.elijahmeeks.com"
+  },
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/emeeks/d3.svg.ribbon/issues"
+  },
+  "homepage": "https://github.com/emeeks/d3.svg.ribbon"
+}
