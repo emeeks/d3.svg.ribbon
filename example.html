@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>d3.svg.ribbon Example</title>
+  <meta charset="utf-8" />
+<script src="http://d3js.org/d3.v3.min.js" type="text/JavaScript"></script>
+<script src="d3.svg.ribbon.js" type="text/JavaScript"></script>
+</head>
+<style>
+  svg {
+    height: 1000px;
+    width: 1000px;
+  }
+
+</style>
+<body>
+
+<div id="viz">
+  <svg>
+  </svg>
+</div>
+</body>
+  <footer>
+
+<script>
+
+var points = [{x: 20, y:20, t: 10},{x:200,y:20, t: 5},{x:20,y:200, t: 15},{x:200,y:200, t: 2}];
+
+ribbon = d3.svg.ribbon()
+  .x(function(d) {return d.x})
+  .y(function(d) {return d.y})
+  .r(function(d) {return d.t});
+
+drag = d3.behavior.drag().on("drag", function (d) {
+  d.x = d3.event.x;
+  d.y = d3.event.y;
+  redraw();
+})
+
+d3.select("svg")
+.append("path")
+.style("fill", "lightblue")
+.style("stroke", "blue")
+.style("stroke-opacity", 0.75)
+.style("stroke-width", "2px")
+.attr("d", ribbon(points))
+
+d3.select("svg")
+.selectAll("circle")
+.data(points)
+.enter()
+.append("circle")
+.attr("r", 3)
+.style("fill", "lightgreen")
+.style("stroke", "blue")
+.style("stroke-width", "2px")
+.attr("cx", function (d) {return d.x})
+.attr("cy", function (d) {return d.y})
+.attr("r", function (d) {return d.t})
+.style("stroke-opacity", 0.75)
+.call(drag);
+
+function redraw() {
+  d3.selectAll("circle")
+    .attr("cx", function (d) {return d.x})
+    .attr("cy", function (d) {return d.y});
+
+  d3.select("path")
+    .attr("d", ribbon(points));
+}
+
+</script>
+  </footer>
+
+</html>
