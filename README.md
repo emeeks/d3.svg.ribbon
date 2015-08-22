@@ -7,6 +7,8 @@ d3.svg.ribbon
 
 Designed to interpolate ribbon or band areas based on sample points with radii.
 
+`npm install d3-svg-ribbon`
+
 **#ribbon.x()**
 
 The x-accessor for the points array, just like d3.svg.line and d3.svg.area. Defaults to returning d.x.
