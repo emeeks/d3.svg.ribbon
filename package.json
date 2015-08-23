@@ -1,6 +1,6 @@
 {
   "name": "d3-svg-ribbon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A generator that creates areas based on points and their radii.",
   "main": "index.js",
   "keywords": [

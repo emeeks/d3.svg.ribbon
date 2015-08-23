@@ -9,7 +9,7 @@ d3.svg.ribbon = function() {
 
 		var bothPoints = buildRibbon(pathData);
 
-		return _lineConstructor.x(_xAccessor).y(_yAccessor).interpolate(_interpolator)(bothPoints);
+		return _lineConstructor.x(function (d) {return d.x}).y(function (d) {return d.y}).interpolate(_interpolator)(bothPoints);
 	}
 
 	_ribbon.x = function (_value) {
